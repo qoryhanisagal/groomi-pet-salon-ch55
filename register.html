@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Pet - Groomi Pet Salon</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Register Your Pet</h1>
+        <p>Provide your pet's details below to register for our services.</p>
+    </header>
+
+    <!-- Pet Registration Section -->
+    <main>
+        <section id="register">
+            <h2>Pet Registration Form</h2>
+            <form id="petForm">
+                <label for="petName">Pet Name:</label>
+                <input type="text" id="petName" name="petName" required>
+
+                <label for="petAge">Age:</label>
+                <input type="number" id="petAge" name="petAge" required>
+
+                <label for="petGender">Gender:</label>
+                <select id="petGender" name="petGender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label for="petService">Service:</label>
+                <select id="petService" name="petService">
+                    <option value="Grooming">Grooming</option>
+                    <option value="Nail Clipping">Nail Clipping</option>
+                    <option value="Bathing">Bathing</option>
+                    <option value="Full Spa">Full Spa</option>
+                </select>
+
+                <label for="petBreed">Breed:</label>
+                <input type="text" id="petBreed" name="petBreed" required>
+
+                <button type="submit">Register Pet</button>
+            </form>
+        </section>
+
+        <!-- Display Registered Pets -->
+        <section id="registeredPets">
+            <h2>Registered Pets</h2>
+            <p id="petCount">Total Registered Pets: 0</p>
+            <ul id="petNamesList"></ul>
+            <p id="averageAge"></p>
+        </section>
+    </main>
+
+    <!-- Footer Section (Shared across all pages) -->
+    <footer>
+        <p>&copy; 2025 Groomi Pet Salon. All Rights Reserved.</p>
+        <a href="index.html" class="btn">Back to Home</a>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
