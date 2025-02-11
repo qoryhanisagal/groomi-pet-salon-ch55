@@ -1,4 +1,5 @@
 /* General Styles */
+/* I kept the light background for a clean look */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -7,15 +8,37 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #0303AB;
+/* Header Styling */
+/* I kept the h1 white only when inside a dark background */
+header {
+    background-color: #0303AB; /* Deep royal blue */
+    padding: 20px;
+    border-radius: 8px;
 }
 
+/* Ensuring headings work on different backgrounds */
+h1 {
+    color: white; /* Works on the dark header */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Section Titles - Adjusted for Visibility */
+h2 {
+    color: #000; /* Black for better readability on light backgrounds */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Paragraph Styling - Ensures readability */
 p {
-    color: #444;
+    color: white
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Button */
+/* Button Styling */
 .btn {
     display: inline-block;
     background-color: #0303AB;
@@ -26,16 +49,18 @@ p {
     transition: background 0.3s;
 }
 
+/* Button Hover Effect */
 .btn:hover {
     background-color: #CA09E8;
 }
 
-/* Pet List */
+/* Pet List Styling */
 #petNamesList {
     list-style: none;
     padding: 0;
 }
 
+/* Styling for Individual Pet Names */
 #petNamesList li {
     background-color: #e0ffff;
     margin: 5px;

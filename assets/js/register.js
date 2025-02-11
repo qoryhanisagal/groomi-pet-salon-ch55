@@ -30,6 +30,8 @@ function displayRow() {
     const petTableBody = document.getElementById('petTableBody');
     petTableBody.innerHTML = ''; // I clear the table first to prevent duplicates.
 
+    console.log("Current pets array:", pets); // ✅ Check if pets exist in the console
+
     // I loop through the `pets` array and create table rows dynamically.
     for (let i = 0; i < pets.length; i++) {
         const pet = pets[i];
@@ -46,6 +48,7 @@ function displayRow() {
 
         petTableBody.innerHTML += row; // I add each new row to the table.
     }
+    document.getElementById('petCount').textContent = `Total Registered Pets: ${pets.length}`;
 }
 
 /**
@@ -92,6 +95,6 @@ function registerPet(event) {
  * This prevents errors where elements might not be ready when JavaScript runs.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    displayRow(); // Load existing pets into the table
+    displayRow(); // This should display any pets in the array when the page loads.
     document.getElementById('petForm').addEventListener('submit', registerPet);
 });
