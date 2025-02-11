@@ -4,67 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Your Pet - Groomi by Descoteaux</title>
+    
+    <!-- Bootstrap CDN for styling -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="assets/css/register.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header>
+    <header class="text-center p-4 bg-primary text-white">
         <h1>Register Your Pet at Groomi by Descoteaux</h1>
         <p>Provide your pet's details below to register for our services.</p>
     </header>
 
     <!-- Pet Registration Form -->
-    <main>
+    <main class="container mt-4">
         <section id="register">
-            <h2>Pet Registration Form</h2>
-            <form id="petForm">
-                <label for="petName">Pet Name:</label>
-                <input type="text" id="petName" name="petName" required>
+            <h2 class="text-center">Pet Registration Form</h2>
+            <form id="petForm" class="row g-3">
+                <div class="col-md-6">
+                    <label for="petName" class="form-label">Pet Name:</label>
+                    <input type="text" id="petName" name="petName" class="form-control" required>
+                </div>
 
-                <label for="petAge">Age:</label>
-                <input type="number" id="petAge" name="petAge" required>
+                <div class="col-md-6">
+                    <label for="petAge" class="form-label">Age:</label>
+                    <input type="number" id="petAge" name="petAge" class="form-control" required>
+                </div>
 
-                <label for="petGender">Gender:</label>
-                <select id="petGender" name="petGender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
+                <div class="col-md-6">
+                    <label for="petGender" class="form-label">Gender:</label>
+                    <select id="petGender" name="petGender" class="form-select">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
 
-                <label for="petBreed">Breed:</label>
-                <input type="text" id="petBreed" name="petBreed" required>
+                <div class="col-md-6">
+                    <label for="petBreed" class="form-label">Breed:</label>
+                    <input type="text" id="petBreed" name="petBreed" class="form-control" required>
+                </div>
 
-                <label for="petService">Service:</label>
-                <select id="petService" name="petService">
-                    <option value="Grooming">Grooming</option>
-                    <option value="Nail Clipping">Nail Clipping</option>
-                    <option value="Bathing">Bathing</option>
-                    <option value="Full Spa">Full Spa</option>
-                </select>
+                <div class="col-md-6">
+                    <label for="petService" class="form-label">Service:</label>
+                    <select id="petService" name="petService" class="form-select">
+                        <option value="Grooming">Grooming</option>
+                        <option value="Nail Clipping">Nail Clipping</option>
+                        <option value="Bathing">Bathing</option>
+                        <option value="Full Spa">Full Spa</option>
+                    </select>
+                </div>
 
-                <label for="petType">Type:</label>
-                <select id="petType" name="petType">
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Bird">Bird</option>
-                    <option value="Other">Other</option>
-                </select>
+                <div class="col-md-6">
+                    <label for="petType" class="form-label">Type:</label>
+                    <select id="petType" name="petType" class="form-select">
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-                <button type="submit">Register Pet</button>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success">Register Pet</button>
+                </div>
             </form>
         </section>
 
-        <!-- Display Registered Pets -->
-        <section id="registeredPets">
-            <h2>Registered Pets</h2>
-            <p id="petCount">Total Registered Pets: 0</p>
-            <ul id="petNamesList"></ul>
+        <!-- Display Registered Pets in a Table -->
+        <section id="registeredPets" class="mt-5">
+            <h2 class="text-center">Registered Pets</h2>
+            <p id="petCount" class="text-center">Total Registered Pets: 0</p>
+
+            <!-- Table for displaying pets -->
+            <table class="table table-striped table-bordered mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Breed</th>
+                        <th>Service</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="petTableBody">
+                    <!-- Pets will be inserted here dynamically -->
+                </tbody>
+            </table>
         </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="text-center mt-4 p-3 bg-primary text-white">
         <p>&copy; 2025 Groomi by Descoteaux. All Rights Reserved.</p>
-        <a href="index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn btn-light">Back to Home</a>
     </footer>
 
     <script src="assets/js/register.js"></script>
