@@ -23,7 +23,7 @@ function displaySalonInfo() {
 }
 
 // I am using `const` for the `pets` array because I do not want to accidentally reassign it.
-// However, `const` still allows me to modify the contents (e.g., adding new pets using .push()).
+// However, `const` still allows me to modify the contents (like adding new pets using .push()).
 const pets = [
     new Pet('Buddy', 3, 'Male', 'Golden Retriever', 'Grooming', 'Dog'),
     new Pet('Mittens', 2, 'Female', 'Siamese Cat', 'Nail Clipping', 'Cat'),
